@@ -9,10 +9,7 @@ function onClick(_event) {
 
   fetch(RANDOM_DOG_URL)
     .then(toJson)
-    .then(function(jsonResponse) {
-      const img = createImage(jsonResponse.message);
-      document.querySelector(".doggos").appendChild(img);
-    });
+    .then(appendImgToDOM);
 }
 
 function toJson(apiResponse) {
@@ -24,4 +21,9 @@ function createImage(dogUrl) {
   image.alt = "Perrito bonito!";
   image.src = dogUrl;
   return image;
+}
+
+function appendImgToDOM(jsonResponse) {
+  const img = createImage(jsonResponse.message);
+  document.querySelector(".doggos").appendChild(img);
 }
