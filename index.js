@@ -35,9 +35,7 @@ function onClickBreeds(_event) {
   const LIST_BREEDS = "https://dog.ceo/api/breeds/list/all";
 
   fetch(LIST_BREEDS)
-    .then(function(apiResponse) {
-      return apiResponse.json();
-    })
+    .then(toJson)
     .then(function(jsonResponse) {
       const list = jsonResponse.message;
       console.log(list);
