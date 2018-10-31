@@ -44,8 +44,11 @@ function appendImgToDOM(jsonResponse) {
 
 // El HTML //
 /*
-<select name="breeds" id="Breeds">
-    <option value="">Please choose an option</option>
-    <option value="affenpinscher">Affenpinscher</option>
-  </select>
+<div>
+    <label for="pet-select">Choose a Breed:</label>
+    <select name="breeds" id="Breeds">
+      <option value="">Please choose an option</option>
+      <option value="greyhound">Greyhound</option>
+    </select>
+  </div>
   */
