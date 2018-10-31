@@ -23,6 +23,9 @@ function onClickBreeds(_event) {
     .then(function(jsonResponse) {
       const list = jsonResponse.message;
       console.log(list);
+
+      // TO DO -> Extraer createLabel function //
+
       const label = document.createElement("label");
       label.htmlFor = "breed-select";
       label.innerText = "Choose a Breed:";
