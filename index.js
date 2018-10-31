@@ -15,6 +15,17 @@ function onClick(_event) {
     .then(appendImgToDOM);
 }
 
+function onClickBreeds(_event) {
+  const LIST_BREEDS = "https://dog.ceo/api/breeds/list/all";
+
+  fetch(LIST_BREEDS)
+    .then(toJson)
+    .then(function(jsonResponse) {
+      const list = jsonResponse.message;
+      console.log(list);
+    });
+}
+
 function toJson(apiResponse) {
   return apiResponse.json();
 }
@@ -31,13 +42,10 @@ function appendImgToDOM(jsonResponse) {
   document.querySelector(".doggos").appendChild(img);
 }
 
-function onClickBreeds(_event) {
-  const LIST_BREEDS = "https://dog.ceo/api/breeds/list/all";
-
-  fetch(LIST_BREEDS)
-    .then(toJson)
-    .then(function(jsonResponse) {
-      const list = jsonResponse.message;
-      console.log(list);
-    });
-}
+// El HTML //
+/*
+<select name="breeds" id="Breeds">
+    <option value="">Please choose an option</option>
+    <option value="affenpinscher">Affenpinscher</option>
+  </select>
+  */
