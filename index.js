@@ -23,6 +23,10 @@ function onClickBreeds(_event) {
     .then(function(jsonResponse) {
       const list = jsonResponse.message;
       console.log(list);
+      const label = document.createElement("label");
+      label.htmlFor = "breed-select";
+      label.innerText = "Choose a Breed:";
+      document.querySelector(".breed-container").appendChild(label);
     });
 }
 
