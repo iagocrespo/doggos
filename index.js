@@ -24,12 +24,17 @@ function onClickBreeds(_event) {
       const list = jsonResponse.message;
       console.log(list);
 
-      // TO DO -> Extraer createLabel function //
+      //👉 TO DO -> Extraer createLabel function 👈//
 
       const label = document.createElement("label");
       label.htmlFor = "breed-select";
       label.innerText = "Choose a Breed:";
       document.querySelector(".breed-container").appendChild(label);
+
+      const select = document.createElement("select");
+      select.htmlFor = "breeds";
+      select.innerText = "Breeds";
+      document.querySelector(".breed-container").appendChild(select);
     });
 }
 
