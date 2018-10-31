@@ -32,9 +32,14 @@ function onClickBreeds(_event) {
       document.querySelector(".breed-container").appendChild(label);
 
       const select = document.createElement("select");
-      select.htmlFor = "breeds";
+      select.id = "breed-select";
       select.innerText = "Breeds";
       document.querySelector(".breed-container").appendChild(select);
+
+      const option = document.createElement("option");
+      option.value = "";
+      option.innerText = "🐶 Please choose an option 🐶";
+      document.querySelector("#breed-select").appendChild(option);
     });
 }
 
