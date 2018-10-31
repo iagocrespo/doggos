@@ -32,5 +32,9 @@ function appendImgToDOM(jsonResponse) {
 }
 
 function onClickBreeds(_event) {
-  console.log(_event);
+  const LIST_BREEDS = "https://dog.ceo/api/breeds/list/all";
+
+  fetch(LIST_BREEDS).then(function(apiResponse) {
+    console.log(apiResponse);
+  });
 }
