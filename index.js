@@ -40,6 +40,12 @@ function onClickBreeds(_event) {
       option.value = "";
       option.innerText = "🐶 Please choose an option 🐶";
       document.querySelector("#breed-select").appendChild(option);
+
+      const razas = Object.keys(list);
+      const option2 = document.createElement("option");
+      option2.value = razas[76];
+      option2.innerText = razas[76];
+      document.querySelector("#breed-select").appendChild(option2);
     });
 }
 
